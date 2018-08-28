@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -22,7 +21,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dp4-pQ-BoR">
                                 <rect key="frame" x="0.0" y="203.5" width="375" height="260"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="dp4-pQ-BoR" secondAttribute="height" multiplier="75:52" id="Bli-i3-H4n"/>
+                                    <constraint firstAttribute="height" constant="260" id="ndh-ek-Cez"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S6W-We-NMG">
@@ -765,6 +764,9 @@ EF8
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2r-e3-j5Q">
                                                 <rect key="frame" x="0.0" y="0.0" width="36" height="84"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="36" id="XX5-gK-YVt"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <state key="normal" title="👱🏻‍♂️">
                                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -826,9 +828,6 @@ EF8
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="i2r-e3-j5Q" firstAttribute="width" secondItem="ZxA-17-CFg" secondAttribute="width" id="VHc-xa-qFg"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

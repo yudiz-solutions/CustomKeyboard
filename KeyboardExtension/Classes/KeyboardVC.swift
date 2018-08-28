@@ -93,7 +93,7 @@ extension KeyboardViewController {
         if let imgData = userDefauls.value(forKey: "bckImage") as? Data{
             self.bckImageView.image = UIImage(data: imgData)
         }else{
-            self.bckImageView.image = #imageLiteral(resourceName: "baby.")
+            self.bckImageView.image = #imageLiteral(resourceName: "Yudiz")
         }
     }
  
