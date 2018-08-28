@@ -1,0 +1,944 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PO1-ob-Gd7">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Keyboard View Controller-->
+        <scene sceneID="aTj-19-u2n">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="PO1-ob-Gd7" customClass="KeyboardViewController" customModule="KeyboardExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eV4-qb-WK5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dp4-pQ-BoR">
+                                <rect key="frame" x="0.0" y="203.5" width="375" height="260"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dp4-pQ-BoR" secondAttribute="height" multiplier="75:52" id="Bli-i3-H4n"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" axis="vertical" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="S6W-We-NMG">
+                                <rect key="frame" x="5" y="45" width="365" height="617"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="U2t-4m-Xhu">
+                                        <rect key="frame" x="0.0" y="0.0" width="365" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fHS-Zi-5ss" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="1">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="Vli-z5-rhB"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="yQC-9A-Is3"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="0tl-fH-Eqf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Swf-Qm-XoS" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="37" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="2">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="lsZ-Tm-zZ7"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="IIO-N3-AcU"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="Qpb-Ol-smO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MHY-MQ-9le" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="74" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="3">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="a2s-79-Z1h"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="LZ7-Jl-aSy"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="za6-Oc-vvc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJB-5e-YY9" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="111" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="4">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="Wav-pM-Zga"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="4SU-uD-l9W"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="kc6-Na-eV6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0l-zW-8JC" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="148" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="5">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="D03-dE-gXM"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="moa-Oi-WNa"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="mYS-Ip-4nW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuA-vy-8hF" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="185" y="0.0" width="32" height="84"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="6">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="8Zx-yD-fiM"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="q6m-mF-fvA"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="QR8-04-XUs"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vhG-n2-zHz" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="222" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="7">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="yl5-yn-bu6"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="WJw-US-Qu0"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="c6l-aN-7yJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eEz-Dr-zn5" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="259" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="8">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="6I3-P2-xFf"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="JIK-uR-GVA"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="Jr8-by-h3f"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efs-33-SDw" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="296" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="9">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="xYr-jR-29W"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="wqZ-4N-XOl"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="WSG-Ab-oGu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B7P-4V-0Ll" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="333" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="0">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="Hcv-Dy-ZuS"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="se6-J3-HNu"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="uLq-2S-4gJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Sbx-sg-MbU">
+                                        <rect key="frame" x="0.0" y="89" width="365" height="83.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkd-V4-8Ir" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="\">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="Ypw-7f-cXs"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="wZX-A2-7aS"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="m3C-Ei-4GM"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uJT-fL-Joe" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="37" y="0.0" width="32" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="@">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="78c-eC-4qn"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="vW7-Vu-aY4"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="5tZ-KN-nxy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVJ-XC-RN5" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="74" y="0.0" width="32" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title=":">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="u5R-n3-ubw"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="CUN-0R-rTj"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="LbH-nf-RVP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CyK-Kb-XB3" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="111" y="0.0" width="32" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title=";">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="YQa-oc-knH"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="No6-53-9kz"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="wvn-D7-OxJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dbd-Qi-5KJ" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="148" y="0.0" width="32" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="(">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="RBT-Jg-pel"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="vl1-AT-xBW"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="T0l-iz-OVG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o7p-cH-FFj" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="185" y="0.0" width="32" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title=")">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="Oxm-bt-Nte"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="scN-xl-x8b"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="AeG-br-5C2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="viQ-oe-3oy" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="222" y="0.0" width="32" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="$">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="K8N-GN-tm7"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="mH0-Vq-7xc"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="BSo-aB-8im"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q3q-Rz-rdm" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="259" y="0.0" width="32" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="&amp;">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="lOA-Kv-Oze"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="hXV-3x-8QK"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="0sj-0b-5LX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xcv-Z1-bGN" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="296" y="0.0" width="32" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="/">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="YId-Xc-Y7T"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="W3E-uK-oiQ"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="pEt-Ql-maO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WL9-Cr-7Tz" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="333" y="0.0" width="32" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="&quot;&quot;">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="U6p-j9-l3P"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="wBL-ib-30z"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="HsK-PV-hIH"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="ZPl-vx-ceS">
+                                        <rect key="frame" x="0.0" y="177.5" width="365" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeS-gk-wQJ" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="36.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal">
+                                                    <string key="title" base64-UTF8="YES">
+EF8
+</string>
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="P20-0e-dsU"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="O4W-bl-Ebm"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="hfl-cx-ujj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5jW-8J-Ch9" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="36.5" y="0.0" width="36.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="-">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="SjH-TX-y59"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="1XA-3f-RLI"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="yJQ-S7-QQJ"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MaP-zt-Bx6" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="73" y="0.0" width="36.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="|">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="Qfo-XO-SBb"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="C6y-M1-hHU"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="XQr-eS-aca"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yJb-NU-ouh" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="109.5" y="0.0" width="36.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="#">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="vFb-zk-3eT"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="VBr-Cl-uCw"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="W5o-Ln-miA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KBW-rL-e7t" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="146" y="0.0" width="36.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="%">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="dbq-ks-ZHX"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="quf-Lm-obI"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="wfs-a5-rXL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BN2-IO-VS9" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="182.5" y="0.0" width="36.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="*">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="8j3-Wk-HdQ"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="NjZ-3I-Ind"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="m53-gG-S6N"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hfE-ii-UfN" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="219" y="0.0" width="36.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="+">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="qe8-Or-Euu"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="Xyc-Nx-P9e"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="Vtm-Nz-oMz"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BzB-hN-K9I" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="255.5" y="0.0" width="36.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="=">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="BDi-us-il2"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="Ulj-fl-EuC"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="FgV-83-x8v"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aoi-n6-1sB" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="292" y="0.0" width="36.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="^">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="xXB-jC-PS2"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="a74-Kh-Ko5"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="1N9-ua-SzW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFY-ZY-oUx" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="328.5" y="0.0" width="36.5" height="84"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="⬅︎">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="backSpacePressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="aIM-h3-XXR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Clc-fm-36r">
+                                        <rect key="frame" x="0.0" y="266.5" width="365" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sOw-fg-oGh" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="32" height="84"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="Q">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="2ii-It-YPP"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="iDg-pA-qn2"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="I1N-Ak-kUx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="45S-d5-O4H" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="37" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="W">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="8Tn-Qv-qJT"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="Jzc-br-hvl"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="Tf3-aG-gHX"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2e4-6q-4Sr" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="74" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="E">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="SJ9-ZS-DPP"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="cFj-Li-wCO"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="Wv3-wb-37y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rbd-ht-2Lh" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="111" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="R">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="bf1-FR-2k9"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="wGX-S1-KfR"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="nD5-z7-Neh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dTy-PA-b5R" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="148" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="T">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="cos-3c-0xj"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="ZQt-bD-W7V"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="aoI-Ln-4tO"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFm-Sq-F6y" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="185" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="Y">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="2s0-4c-Cfd"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="N2H-tQ-VXd"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="VOp-YU-Fzx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="94L-hI-L5b" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="222" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="U">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="55n-dh-hkc"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="eTI-bh-PuW"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="yNA-I0-DLF"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6k1-mD-g40" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="259" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="I">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="8p2-vK-5OW"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="xJ9-cZ-e9v"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="Y8P-G9-7gD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whc-DU-dQL" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="296" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="O">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="tIl-ub-dcA"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="uhX-rh-FyI"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="NWH-mq-X8I"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Id5-u7-F5Z" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="333" y="0.0" width="32" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="P">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="wLs-xU-ggI"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="3P3-px-cxi"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="RLE-UF-qHR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qT4-h6-jzW">
+                                        <rect key="frame" x="0.0" y="355.5" width="365" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mhv-RL-CVO" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="A">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="sQS-Lm-tAE"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="bXa-zq-wi8"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="o9o-cD-Dg9"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SxB-P4-VfU" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="41" y="0.0" width="36" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="S">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="Ykl-rG-3VE"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="Nj9-dx-aek"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="Dbf-9X-Qq3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KeP-t8-fHi" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="82" y="0.0" width="36.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="D">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="IxO-66-OPR"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="LJM-4f-P6Y"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="63S-7F-AtB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZK-Jv-r9h" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="123.5" y="0.0" width="36" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="F">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="Dcb-kx-8W9"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="iYq-5X-zEA"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="zc6-qP-UjB"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZZE-3X-Upe" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="164.5" y="0.0" width="36" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="G">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="wuT-rw-ewd"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="v9R-nL-Eh1"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="Maf-69-Olb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RN-G1-zWn" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="205.5" y="0.0" width="36" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="H">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="Rq1-Y2-njO"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="haN-dd-kMb"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="Lre-SM-9Ec"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="icC-ut-fga" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="246.5" y="0.0" width="36.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="J">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="I5B-mb-XnJ"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="Aau-FV-diq"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="mU0-Kg-YtW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QcU-8x-S4C" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="288" y="0.0" width="36" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="K">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="dIa-gS-GwB"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="DQt-Fa-4KU"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="tLr-Lb-SaP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYc-1x-XO7" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="329" y="0.0" width="36" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="L">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="M3W-Uv-6q2"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="CLz-z5-ehs"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="CRC-eg-HXJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="4zC-0M-N9b">
+                                        <rect key="frame" x="0.0" y="444.5" width="365" height="83.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lwj-8P-A1H" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="83.5"/>
+                                                <state key="normal" title="⬆︎">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <state key="selected" title="⇧"/>
+                                                <connections>
+                                                    <action selector="shiftPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="siZ-Qz-zs5"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxA-17-CFg" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="41" y="0.0" width="36" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="Z">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="iiJ-RD-h45"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="Lsh-bi-bAn"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="stm-xq-nBa"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gZg-Vx-vLa" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="82" y="0.0" width="36.5" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="X">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="DyN-1v-HOC"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="hBr-7T-dOJ"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="rwD-7s-GYG"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7K-Ml-Lsj" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="123.5" y="0.0" width="36" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="C">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="8hW-vN-uiv"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="Udc-Sc-H17"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="Fxo-Qh-LeY"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mkT-Hm-AAR" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="164.5" y="0.0" width="36" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="V">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="kNN-8w-SRL"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="fxO-AJ-nDy"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="5Lp-uz-4wf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YCt-gb-Okr" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="205.5" y="0.0" width="36" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="B">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="eXk-bF-OkR"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="rub-Sm-9Rx"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="tAR-wG-VP3"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6z-yj-UPl" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="246.5" y="0.0" width="36.5" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="N">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="TQe-vP-MBc"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="JgK-VX-cRC"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="LT7-RA-ysu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zw-ss-mfU" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="288" y="0.0" width="36" height="83.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="M">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="Lyk-f2-nw2"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="aYZ-Hi-cCA"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="GX0-cw-kJe"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tzm-Ty-BPK" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="329" y="0.0" width="36" height="83.5"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="⬅︎">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="backSpacePressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="v2S-xm-j7S"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="6uu-VH-CMR">
+                                        <rect key="frame" x="0.0" y="533" width="365" height="84"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i2r-e3-j5Q">
+                                                <rect key="frame" x="0.0" y="0.0" width="36" height="84"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                                <state key="normal" title="👱🏻‍♂️">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="openAlert:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="Ceb-fe-8oP"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sco-fB-ksl" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="41" y="0.0" width="36" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="!@#">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="charSetPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="Ppg-q4-3AL"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XnI-db-dqx" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="82" y="0.0" width="176.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title="space">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="spacePressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="mcj-9U-dfo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hDM-zr-MFY" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="263.5" y="0.0" width="36.5" height="84"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="17"/>
+                                                <state key="normal" title=".">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="keyDragDown:forEvent:" destination="PO1-ob-Gd7" eventType="touchDown" id="7cG-sx-wYZ"/>
+                                                    <action selector="keyDragInside:forEvent:" destination="PO1-ob-Gd7" eventType="touchDragInside" id="uuP-K8-42H"/>
+                                                    <action selector="keyPressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="J5b-uk-P2h"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qe-NX-ldw" customClass="ShadowButton" customModule="KeyboardExtension" customModuleProvider="target">
+                                                <rect key="frame" x="305" y="0.0" width="60" height="84"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="60" id="AyD-8J-Qlk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                                <state key="normal" title="Done">
+                                                    <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="donePressed:" destination="PO1-ob-Gd7" eventType="touchUpInside" id="ZzB-ic-l9b"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="hDM-zr-MFY" firstAttribute="width" secondItem="i2r-e3-j5Q" secondAttribute="width" id="VEP-bu-gLC"/>
+                                            <constraint firstItem="sco-fB-ksl" firstAttribute="width" secondItem="i2r-e3-j5Q" secondAttribute="width" id="ylw-fc-pAn"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="i2r-e3-j5Q" firstAttribute="width" secondItem="ZxA-17-CFg" secondAttribute="width" id="VHc-xa-qFg"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.58980089430000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="S6W-We-NMG" secondAttribute="bottom" constant="5" id="6XI-MB-4Tp"/>
+                            <constraint firstItem="dp4-pQ-BoR" firstAttribute="centerX" secondItem="eV4-qb-WK5" secondAttribute="centerX" id="ERh-gY-kkw"/>
+                            <constraint firstItem="dp4-pQ-BoR" firstAttribute="centerY" secondItem="eV4-qb-WK5" secondAttribute="centerY" id="NeE-pu-tdN"/>
+                            <constraint firstItem="S6W-We-NMG" firstAttribute="leading" secondItem="eV4-qb-WK5" secondAttribute="leading" constant="5" id="X4c-5w-Qjg"/>
+                            <constraint firstAttribute="trailing" secondItem="S6W-We-NMG" secondAttribute="trailing" constant="5" id="dof-e6-Yx2"/>
+                            <constraint firstItem="dp4-pQ-BoR" firstAttribute="width" secondItem="eV4-qb-WK5" secondAttribute="width" id="kNq-DH-r1j"/>
+                            <constraint firstItem="S6W-We-NMG" firstAttribute="top" secondItem="eV4-qb-WK5" secondAttribute="top" constant="45" id="ljU-QE-jQf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Qu9-wS-4xq"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="jXQ-Lz-bd7"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="bckImageView" destination="dp4-pQ-BoR" id="Vfd-i5-VdF"/>
+                        <outlet property="btnShift" destination="lwj-8P-A1H" id="ifk-19-uvr"/>
+                        <outlet property="charSet" destination="Sbx-sg-MbU" id="h6q-zs-d6g"/>
+                        <outlet property="imgBubbleView" destination="A3u-8s-fnR" id="6z9-AP-xbz"/>
+                        <outlet property="lblZoomText" destination="DWT-ru-KyA" id="CUq-FR-Jss"/>
+                        <outlet property="numSet" destination="U2t-4m-Xhu" id="gdS-lT-KjE"/>
+                        <outlet property="row0" destination="Clc-fm-36r" id="6tB-hN-kyp"/>
+                        <outlet property="row1" destination="qT4-h6-jzW" id="Lb0-aw-t9c"/>
+                        <outlet property="row2" destination="4zC-0M-N9b" id="sMG-Am-RY6"/>
+                        <outlet property="row3" destination="6uu-VH-CMR" id="IAN-32-GqX"/>
+                        <outlet property="specialCharSet" destination="ZPl-vx-ceS" id="Cxq-EI-xaW"/>
+                        <outlet property="zoomView" destination="DRx-k4-9od" id="JWa-ua-d0j"/>
+                        <segue destination="acw-GU-JOM" kind="presentation" identifier="gallerySegue" animates="NO" id="48q-J4-KoC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="utd-Yn-diw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="DRx-k4-9od">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="70"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="A3u-8s-fnR">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="70"/>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Y" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DWT-ru-KyA">
+                            <rect key="frame" x="23.5" y="10" width="13" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="A3u-8s-fnR" secondAttribute="bottom" id="7fD-yZ-OSl"/>
+                        <constraint firstItem="A3u-8s-fnR" firstAttribute="leading" secondItem="DRx-k4-9od" secondAttribute="leading" id="9LW-gj-huz"/>
+                        <constraint firstAttribute="trailing" secondItem="A3u-8s-fnR" secondAttribute="trailing" id="Srk-6S-BU6"/>
+                        <constraint firstItem="A3u-8s-fnR" firstAttribute="top" secondItem="DRx-k4-9od" secondAttribute="top" id="Upk-gr-OK3"/>
+                        <constraint firstItem="DWT-ru-KyA" firstAttribute="centerX" secondItem="DRx-k4-9od" secondAttribute="centerX" id="Ygt-Kl-9WU"/>
+                        <constraint firstItem="DWT-ru-KyA" firstAttribute="top" secondItem="IT4-cc-voE" secondAttribute="top" constant="10" id="gx1-ij-A0c"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="IT4-cc-voE"/>
+                </view>
+            </objects>
+            <point key="canvasLocation" x="808.79999999999995" y="107.49625187406298"/>
+        </scene>
+        <!--CameraVC-->
+        <scene sceneID="OpI-Ny-nHR">
+            <objects>
+                <viewController storyboardIdentifier="CameraVC" id="acw-GU-JOM" customClass="CameraVC" customModule="KeyboardExtension" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lKi-qz-M7N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="allow full access Open Setting -&gt; Custom Keyboard" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EE5-Gj-2ur">
+                                <rect key="frame" x="44.5" y="312.5" width="287.5" height="43"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TpZ-Ql-lob">
+                                <rect key="frame" x="15" y="262.5" width="50" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="Jfk-Hy-dju"/>
+                                    <constraint firstAttribute="height" constant="40" id="xRp-pW-h3t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnBackTapped:" destination="acw-GU-JOM" eventType="touchUpInside" id="za7-Kj-ZaD"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="EE5-Gj-2ur" firstAttribute="centerY" secondItem="lKi-qz-M7N" secondAttribute="centerY" id="0hH-ZH-chk"/>
+                            <constraint firstItem="EE5-Gj-2ur" firstAttribute="top" secondItem="TpZ-Ql-lob" secondAttribute="bottom" constant="10" id="1IY-jQ-xXL"/>
+                            <constraint firstItem="EE5-Gj-2ur" firstAttribute="centerX" secondItem="lKi-qz-M7N" secondAttribute="centerX" id="Jvt-8I-ikR"/>
+                            <constraint firstItem="TpZ-Ql-lob" firstAttribute="leading" secondItem="Mvs-P2-mHU" secondAttribute="leading" constant="15" id="WWp-tp-ruS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Mvs-P2-mHU"/>
+                    </view>
+                    <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="btnBack" destination="TpZ-Ql-lob" id="5si-1A-f44"/>
+                        <outlet property="lblWarningMsg" destination="EE5-Gj-2ur" id="mxm-zr-cJW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jXL-Ej-OtR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1540" y="107"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image" width="22" height="41"/>
+    </resources>
+</document>
